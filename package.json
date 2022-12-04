@@ -1,0 +1,23 @@
+{
+  "name": "tool-trqdfcore",
+  "version": "1.1.0",
+  "description": "TRQDFCore Tools",
+  "keywords": [
+    "trqdf",
+    "trqdfcore",
+    "tools",
+    "uploader",
+    "stmicroelectronics",
+    "stm32"
+  ],
+  "homepage": "https://www.triqada.fi",
+  "system": [
+    "windows",
+    "windows_amd64",
+    "windows_x86"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/triqadafi/TRQDFCore_Tools"
+  }
+}
