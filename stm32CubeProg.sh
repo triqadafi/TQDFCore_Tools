@@ -2,7 +2,7 @@
 set -o nounset # Treat unset variables as an error
 
 STM32CP_CLI=
-ADDRESS=0x8000000
+# ADDRESS=0x8000000
 ERASE=""
 MODE=""
 PORT=""
@@ -100,6 +100,8 @@ fi
 # Parse options
 PROTOCOL=$1
 FILEPATH=$2
+ADDRESS_OFFSET=$((0x8000000 + $3))
+ADDRESS=$(printf '0x%02X\n' ${ADDRESS_OFFSET})
 # Protocol $1
 # 1x: Erase all sectors
 if [ "$1" -ge 10 ]; then
@@ -120,7 +122,7 @@ case $PROTOCOL in
     if [ $# -lt 3 ]; then
       usage 3
     else
-      PORT=$3
+      PORT=$4
       shift 3
     fi
     ;;
